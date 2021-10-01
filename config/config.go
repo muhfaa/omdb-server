@@ -47,7 +47,7 @@ func initConfig() *AppConfig {
 	defaultConfig.OMDBKey = "faf7e5bb&s"
 	defaultConfig.OMDBURL = "http://www.omdbapi.com/"
 	defaultConfig.MYSQLUsername = "root"
-	defaultConfig.MYSQLPassword = "password"
+	defaultConfig.MYSQLPassword = ""
 	defaultConfig.MYSQLHost = "127.0.0.1"
 	defaultConfig.MYSQLPort = "3306"
 	defaultConfig.MYSQLDBName = "omdb"

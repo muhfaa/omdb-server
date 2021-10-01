@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+package core;
+
+option go_package = "github.com/muhfaa/omdb-server/core";
+
+message SearchRequest {
+  string searchword = 1;
+  int32 page = 2;
+}
+
+message SearchReply {
+  repeated SearchEntry Search = 1;
+  string totalResults = 2;
+  string Response = 3;
+}
+
+message SearchEntry {
+  string Title = 1;
+  string Year = 2;
+  string imdbID = 3;
+  string Type = 4;
+  string Poster = 5;
+}
+
+message SingleRequest {
+  string id = 1;
+}
+
+message SingleRating {
+  string Source = 1;
+  string Value = 2;
+}
+
+message SingleReply {
+  string Rated = 1;
+  string Released = 2;
+  string Runtime = 3;
+  string Genre = 4;
+  string Director = 5;
+  string Writer = 6;
+  string Actors = 7;
+  string Plot = 8;
+  string Language = 9;
+  string Country = 10;
+  string Awards = 11;
+  repeated SingleRating Ratings = 12;
+  string Metascore = 13;
+  string imdbRating = 14;
+  string imdbVotes = 15;
+  string DVD = 16;
+  string BoxOffice = 17;
+  string Production = 18;
+  string Website = 19;
+  string Response = 20;
+  string Title = 21;
+  string Year = 22;
+  string imdbID = 23;
+  string Type = 24;
+  string Poster = 25;
+}

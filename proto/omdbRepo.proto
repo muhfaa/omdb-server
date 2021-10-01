@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package grpcstub;
+
+import "core/omdbCore.proto";
+
+option go_package = "github.com/muhfaa/omdb-server/repository/grpcstub";
+
+service Omdb {
+  rpc Search (core.SearchRequest) returns (core.SearchReply) {}
+  rpc Single (core.SingleRequest) returns (core.SingleReply) {}
+}
